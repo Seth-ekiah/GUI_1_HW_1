@@ -1,0 +1,133 @@
+<!--
+File: index.html
+GUI Assignment: Creating Your First Web Page - HW1
+Caleb Whitmer, UMass Lowell Computer Science, caleb_whitmer@student.uml.edu
+Copyright (c) 2025 by Caleb. All rights reserved. May be freely copied or
+excerpted for educational purposes with credit to the author.
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Jupiter</title>
+    <link rel="stylesheet" href="css/style.css">
+  </head>
+  <body>
+    <!-- Badges -->
+    <p style="position: absolute;">
+        <a href="https://validator.w3.org/">
+            <img style="border:0;width:88px;height:31px"
+                src="https://www.w3.org/Icons/valid-html401.png"
+                alt="Valid HTML!">
+        </a>
+    </p>
+    <p style="position: absolute; transform: translate(0, 64px);">
+        <a href="https://jigsaw.w3.org/css-validator/">
+            <img style="border:0;width:88px;height:31px"
+                src="https://jigsaw.w3.org/css-validator/images/vcss"
+                alt="Valid CSS!">
+        </a>
+    </p>
+
+    <!-- Background image of Jupiter -->
+  	<div id="jupiter"></div>
+  	
+    <!-- Hero landing section / introductions -->
+  	<section class="text-section" id="hero">
+  		<h1>Welcome to Jupiter!</h1>
+  		<p>If you stand outside on a clear night and look up, you might just be able to spot the planet Jupiter, as it is the third brightest object in the night sky. Jupiter is so bright because it is the largest planet in our solar system, having a diameter of eleven Earth's! Next time you are out star gazing, see if you can spot Jupiter!</p>
+  	</section>
+
+    <!-- Description of Jupiter -->
+  	<section class="text-section">
+  		<h1>What is Jupiter Like?</h1>
+  		<p>Jupiter is a gas giant, meaning that it is all clouds and has no surface. These clouds, made up mostly of hydrogen and helium, are noticeably turbulent, with large storms raging all over the planet. Most notably, the Great Red Spot is Jupiter's largest storm and has been raging since at least 1831! You can see the storm in most images of Jupiter. Jupiter also has an extremely large magnetic field. So large, in fact, that it almost reaches Saturn's orbit! This magnetic field is very strong, and causes an aurorae to appear around its north and south poles. This is why Jupiter appears with blue rings around the top and bottom in some images.</p>
+  	</section>
+
+    <!-- Jupiter's Moons -->
+  	<section class="text-section" id="galilean">
+      <h1>Meet the Galilean Moons!</h1>
+      <p>Scientists have actually observed that Jupiter has at least ninety-seven moons! The four largest moons, however, are known as the Galilean Moons, because they were discovered by Galileo himself. However, it was Johannes Kepler who decided to name the mooons: </p>
+      <div class="moon" id="ganymede">
+        <p>Ganymede</p>
+      </div>
+      <div class="moon" id="callisto">
+        <p>Callisto</p>
+      </div>
+      <div class="moon" id="io">
+        <p>Io</p>
+      </div>
+      <div class="moon" id="europa">
+        <p>Europa</p>
+      </div>
+  	</section>
+
+    <!-- Discussing Jupiter's name -->
+  	<section class="text-section">
+  		<h1>How did Jupiter get its Name?</h1>
+  		<div class="flex-container">
+  			<div id="zeus"></div>
+  			<p>When the ancient Romans began to observe Jupiter, they named it after their god of the sky and thunder - Jupiter. To the ancient Greeks this god was also known by a more familiar name - Zeus.</p>
+  		</div>
+  	</section>
+
+    <!-- Scientific Data about Jupiter -->
+    <section class="text-section" id="data">
+      <h1>Here is Some Data On Jupiter</h1>
+      <div class="center">
+      <table>
+
+        <tr>
+          <th>Mean Radius</th>
+          <td>69,911 km</td>
+        </tr>
+
+        <tr>
+          <th>Mass</th>
+          <td>1.8982 &times; 10&#x00B9;&#x2070; km</td>
+        </tr>
+
+        <tr>
+          <th>Furthest Distance To Sun</th>
+          <td>8.16 &times; 10&#x2076; km</td>
+        </tr>
+
+        <tr>
+          <th>Closest Distance To Sun</th>
+          <td>7.41 &times; 10&#x2076; km</td>
+        </tr>
+
+        <tr>
+          <th>Length of One Jupiter Year</th>
+          <td>11.86 Earth Years</td>
+        </tr>
+
+        <tr>
+          <th>Surface Gravity</th>
+          <td>24.79 m/s&#x00B2;</td>
+        </tr>
+
+        <tr>
+          <th>Average Orbital Speed</th>
+          <td>13.06 km/s</td>
+        </tr>
+        
+      </table>
+      </div>
+    </section>
+
+    <!-- Learn more here section -->
+    <section class="text-section" id="learn-more">
+      <h1>Where can I Learn More?</h1>
+      <p>Here are a few links to some insightful resources:</p>
+      <br>
+      <div class="flex-container">
+        <a href="https://en.wikipedia.org/wiki/Jupiter" target="_blank">Wikipedia: Jupiter</a>
+        <a href="https://en.wikipedia.org/wiki/Galilean_moons" target="_blank">Wikipedia: Galilean Moons</a>
+        <a href="https://www.nasa.gov/history/410-years-ago-galileo-discovers-jupiters-moons/" target="_blank">NASA: Galilean Moons</a>
+      </div>
+    </section>
+
+	</body>
+</html>
