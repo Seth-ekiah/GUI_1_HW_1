@@ -1,0 +1,205 @@
+/*Default page settings*/
+body {
+	background-color: black;
+	font-family: monospace;
+	font-size: x-large;
+	margin: 0;
+}
+
+/*This effects the background image of Jupiter*/
+#jupiter {
+	/* I am using a radial gradient on the background image to make it look
+	 * round, and very large - like a planet */
+	background-image: radial-gradient(closest-side, transparent 90%, black), url('../img/jupiter.png');
+	background-size: 100%;
+	width: min(100vw, 100vh);
+	height: min(100vw, 100vh);
+	position: fixed;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+	z-index: -1;
+}
+
+/*This effects the hero / landing content*/
+#hero {
+	color: white;
+	background-color: transparent;
+	background-image: linear-gradient(transparent, black);
+	height: 80vh;
+	align-content: center;
+	padding-left: 5%;
+	padding-right: 5%;
+}
+
+/*Text section refers to each section of the document*/
+.text-section {
+	background-color: ghostwhite;
+	padding: 2.5% 5% 2.5% 5%;
+}
+.text-section h1 {
+	margin-bottom: 5%;
+}
+.text-section p {
+	text-align: justify;
+}
+
+/*This refers to the section of the document which focuses on Jupiter's moons*/
+#galilean {
+	height: 85vh;
+	background-color: transparent;
+	background-image: linear-gradient(black, transparent 25%);
+	color: white;
+}
+
+/*This class refers to specifies options for basic moon object*/
+.moon {
+	position: fixed;
+	left: -50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+	border-radius: 100%;
+	border-color: black;
+	border-style: solid;
+	border-width: 5px;
+	z-index: -1;
+	animation: none;
+}
+/* Each moon has some text under it, displaying its name*/
+.moon p {
+	color: white;
+	font-size: small;
+	margin-top: 120px;
+	background-color: black;
+	width: fit-content;
+	margin-left: auto;
+	margin-right: auto;
+	padding: 5px;
+	font-weight: bold;
+	border-radius: 10px;
+
+}
+
+/* Background, size, and animation duration settings for each moon - all are
+ * unique */
+#ganymede {
+	background-color: #978e7e;
+	width: 100px;
+	height: 100px;
+	animation-duration: 1s;
+}
+#callisto {
+	background-color: #766c5a;
+	width: 95px;
+	height: 94px;
+	animation-duration: 1.25s;
+}
+#io {
+	background-color: #f4e779;
+	width: 86px;
+	height: 86px;
+	animation-duration: 1.5s;
+}
+#europa {
+	background-color: #fcfafd;
+	width: 76px;
+	height: 76px;
+	animation-duration: 1.75s;
+}
+
+/*Each moon has a unique animation - so as to give the illusion of varying orbits*/
+@keyframes ganymede-animation {
+	from { left: -50%; }
+	to { left: 75%; }
+}
+@keyframes callisto-animation {
+	from { left: -50% }
+	to { left: 58.3% }
+}
+@keyframes io-animation {
+	from { left: -50% }
+	to { left: 41.6% }
+}
+@keyframes europa-animation {
+	from { left: -50% }
+	to { left: 25% }
+}
+
+/* When the mouse cursor hovers over the moon section, all moon animations will
+ * play at the same time */
+#galilean:hover .moon {
+	animation-fill-mode: forwards;
+	animation-timing-function: ease-out;
+	animation-iteration-count: 1;
+}
+#galilean:hover #ganymede {
+	animation-name: ganymede-animation;
+}
+#galilean:hover #callisto {
+	animation-name: callisto-animation;
+}
+#galilean:hover #io {
+	animation-name: io-animation;
+}
+#galilean:hover #europa {
+	animation-name: europa-animation;
+}
+
+/*This class defines a basic flex container*/
+.flex-container {
+	display: flex;
+	flex-direction: row;
+	gap: 5%;
+	align-items: center;
+}
+
+/* This refers to the image of the lightning bolt which is displayed in the
+ * "Jupiter's name" section */
+#zeus {
+	background-image: url('../img/zeus.png');
+	max-width: 200px;
+	min-width: 200px;
+	height: 200px;
+}
+
+/* This class can be applied to a div to center all of its contents */
+.center {
+	width: 100%;
+	display: flex;
+	align-content: center;
+	justify-content: center;
+	padding-top: 5%;
+	padding-bottom: 5%;
+}
+
+/*The data section displays a table of scientific data about Jupiter*/
+#data {
+	background-color: #101010;
+	color: white;
+}
+
+/*Here is my creative use of a table. */
+#data table {
+	border-spacing: 0;
+}
+#data table * {
+	padding-top: 25px;
+	border-bottom: solid 2px;
+}
+#data table th {
+	text-align: right;
+	border-image: linear-gradient(to left, white 75%, transparent);
+	border-image-slice: 1;
+}
+#data table th:after {
+	content:": ";
+}
+#data table td {
+	border-image: linear-gradient(to right, white 75%, transparent);
+	border-image-slice: 1;
+}
+
+/* I wanted these links to appear with a different color */
+#learn-more a {
+	color: cadetblue;
+}
